@@ -364,7 +364,7 @@ def color_tipo(val):
 st.dataframe(
     df_vars.style
         .map(color_cat, subset=["En modelo"])
-        .applymap(color_tipo, subset=["Categoría"]),
+        .map(color_tipo, subset=["Categoría"]),
     use_container_width=True,
     hide_index=True,
     height=520,
