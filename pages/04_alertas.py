@@ -121,7 +121,7 @@ def color_riesgo(val):
     return ""
 
 st.dataframe(
-    df_show.style.applymap(color_riesgo, subset=["Riesgo_Label"])
+    df_show.style.map(color_riesgo, subset=["Riesgo_Label"])
                .format({"Attendance (%)": "{:.1f}", "Total_Score": "{:.1f}",
                         "P_Riesgo_Alto": "{:.1f}%", "Confianza (%)": "{:.1f}%",
                         "Study_Hours_per_Week": "{:.1f}"}),
